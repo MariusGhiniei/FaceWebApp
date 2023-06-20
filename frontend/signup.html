@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Face Recognition</title>
+    <link rel="stylesheet" href="./style/signup-style.css">
+
+    
+</head>
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <form method="post" action="/">
+                <ul>
+                    <li for="name"> Name: 
+                        <input type="text" id="name" name="name" placeholder="Write your full name" />
+                    </li>  
+                    <li for="email"> Email: 
+                        <input type="text" id="email" name="email" placeholder="Write your email" />
+                    </li> 
+                    <li for="images"> Faces: 
+                        <video id="webcam" width="320" height="240" autoplay muted></video>
+                    </li>
+                    <li>
+                        <p id="status"></p>
+                    </li>
+                    <li>
+                        <div class="container-btns">
+                            <button id="start-camera" class="next" type="button">Start WebCam</button>
+                            <button id="take-images" class="next" type="button" onclick="takeImagesFromWebcam()">Take Images</button>
+                            <button id="sendClassifier" class="next" type="button">Send the Classifier</button>
+                        </div>
+                    </li>
+                    <li>
+                        <input id="inputClassifier" type="text" name="classifier" disabled>
+                        <!-- <button id="draw-pictures" class="next" type="button" onclick="drawImages()">Draw Images</button> -->                
+                    </li>
+                    <button id="submit" class="next" type="submit">Submit</button>
+                </ul>
+            
+            </form>
+       </div>
+        <div class="box">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+       
+      </div>
+      <div id="image-container"></div>
+
+      <img id ="person-1" src="generatedFaces/person1.jpeg" alt="person-1" width="320" height="240">
+      <img id ="person-2" src="generatedFaces/person2.jpeg" alt="person-2" width="320" height="240">
+      <img id ="person-3" src="generatedFaces/person3.jpeg" alt="person-3" width="320" height="240">
+      <img id ="person-4" src="generatedFaces/person4.jpeg" alt="person-4" width="320" height="240">
+      <img id ="person-5" src="generatedFaces/person5.jpeg" alt="person-5" width="320" height="240">
+      <img id ="person-6" src="generatedFaces/person6.jpeg" alt="person-6" width="320" height="240">
+      <img id ="person-7" src="generatedFaces/person7.jpeg" alt="person-7" width="320" height="240">
+      <img id ="person-8" src="generatedFaces/person8.jpeg" alt="person-8" width="320" height="240">
+      <img id ="person-9" src="generatedFaces/person9.jpeg" alt="person-9" width="320" height="240">
+      <img id ="person-10" src="generatedFaces/person10.jpeg" alt="person-10" width="320" height="240">
+      <img id ="person-11" src="generatedFaces/person11.jpeg" alt="person-11" width="320" height="240">
+      <img id ="person-12" src="generatedFaces/person12.jpeg" alt="person-12" width="320" height="240">
+      <img id ="person-13" src="generatedFaces/person13.jpeg" alt="person-13" width="320" height="240">
+      <img id ="person-14" src="generatedFaces/person14.jpeg" alt="person-14" width="320" height="240">
+      <img id ="person-15" src="generatedFaces/person15.jpeg" alt="person-15" width="320" height="240">
+      <img id ="person-16" src="generatedFaces/person16.jpeg" alt="person-16" width="320" height="240">
+      <img id ="person-17" src="generatedFaces/person17.jpeg" alt="person-17" width="320" height="240">
+      <img id ="person-18" src="generatedFaces/person18.jpeg" alt="person-18" width="320" height="240">
+      <img id ="person-19" src="generatedFaces/person19.jpeg" alt="person-19" width="320" height="240">
+      <img id ="person-20" src="generatedFaces/person20.jpeg" alt="person-20" width="320" height="240">
+    
+
+    <script src="signup.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/blazeface"></script>
+    
+    
+</body>
+</html>
